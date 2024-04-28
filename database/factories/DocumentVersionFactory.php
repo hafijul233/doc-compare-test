@@ -17,7 +17,12 @@ class DocumentVersionFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'body_content' => [
+                'introduction' => fake()->randomHtml,
+                'facts' => fake()->randomHtml,
+                'summary' => fake()->randomHtml
+            ],
+            'tags_content' => fake()->randomHtml
         ];
     }
 }

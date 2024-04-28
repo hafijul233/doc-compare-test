@@ -9,6 +9,8 @@ class Document extends Model
 {
     use HasFactory;
 
+    public const INITIAL_VERSION = '1';
+
     /**
      * The attributes that are mass assignable.
      *
@@ -19,4 +21,13 @@ class Document extends Model
         'current_version',
         'status',
     ];
+
+    public function versions(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(DocumentVersion::class);
+    }
+    public function users(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(DocumentUser::class);
+    }
 }

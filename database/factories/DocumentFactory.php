@@ -19,7 +19,7 @@ class DocumentFactory extends Factory
     {
         return [
             'title' => fake()->sentence(random_int(6,10)),
-            'current_version' => '0.0.1'
+            'current_version' => '1'
         ];
     }
 }

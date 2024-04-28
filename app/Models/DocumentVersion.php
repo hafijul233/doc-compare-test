@@ -29,8 +29,7 @@ class DocumentVersion extends Model
      * @var array<string, string>
      */
     protected $casts = [
-        'body_content' => 'array',
-        'tags_content' => 'array',
+        'body_content' => 'array'
     ];
 
     public function document(): BelongsTo
