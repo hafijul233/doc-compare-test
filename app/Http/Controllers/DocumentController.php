@@ -14,7 +14,7 @@ class DocumentController extends Controller
      */
     public function index(): \Inertia\Response
     {
-        $documents = Document::orderBy('name')
+        $documents = Document::orderBy('title')
             ->paginate(10)
             ->withQueryString()
             ->through(fn($document) => [
