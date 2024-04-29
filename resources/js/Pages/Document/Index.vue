@@ -121,10 +121,10 @@ const sources = [
 </script>
 
 <template>
-    <Head title="Scrapers"/>
+    <Head title="Documents"/>
     <AuthenticatedLayout>
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">Scrapers</h2>
+            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">Documents</h2>
         </template>
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden sm:rounded-lg">
@@ -204,14 +204,14 @@ const sources = [
                             <thead
                                 class="border text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                             <tr>
-                                <th scope="col" class="px-6 py-3">
+                                <th class="p-3" scope="col">
                                     <div class="flex items-center">
                                         <input id="checkbox-all-search" type="checkbox"
                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                         <label for="checkbox-all-search" class="sr-only">checkbox</label>
                                     </div>
                                 </th>
-                                <th scope="col" class="px-6 py-3">
+                                <th class="p-3" scope="col">
                                     <div class="flex justify-between">
                                         Color
                                         <a href="#">
@@ -227,7 +227,7 @@ const sources = [
                                         </a>
                                     </div>
                                 </th>
-                                <th scope="col" class="px-6 py-3">
+                                <th class="p-3" scope="col">
                                     <div class="flex justify-between">
                                         Color
                                         <a href="#">
@@ -243,7 +243,7 @@ const sources = [
                                         </a>
                                     </div>
                                 </th>
-                                <th scope="col" class="px-6 py-3">
+                                <th class="p-3" scope="col">
                                     <div class="flex justify-between">
                                         Category
                                         <a href="#">
@@ -259,7 +259,7 @@ const sources = [
                                         </a>
                                     </div>
                                 </th>
-                                <th scope="col" class="px-6 py-3">
+                                <th class="p-3" scope="col">
                                     <div class="flex justify-between">
                                         Price
                                         <a href="#">
@@ -275,7 +275,7 @@ const sources = [
                                         </a>
                                     </div>
                                 </th>
-                                <th scope="col" class="px-6 py-3">
+                                <th class="p-3" scope="col">
                                     <div class="flex justify-between">
                                         Enabled
                                         <a href="#">
@@ -291,41 +291,41 @@ const sources = [
                                         </a>
                                     </div>
                                 </th>
-                                <th scope="col" class="px-6 py-3">
+                                <th class="p-3" scope="col">
                                 </th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
                                 v-for="(source, index) in sources" :key="index">
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="row" class="p-3">
                                     <div class="flex items-center">
                                         <input id="checkbox-all-search" type="checkbox"
                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                         <label for="checkbox-all-search" class="sr-only">checkbox</label>
                                     </div>
                                 </th>
-                                <th scope="row"
-                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                <td
+                                    class="p-1 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                     {{ source.name }}
-                                </th>
-                                <td class="px-6 py-4">
+                                </td>
+                                <td class="p-1">
                                     {{ source.country }}
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="p-1">
                                     {{ source.document }}
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="p-1">
                                     {{ source.updated_at }}
                                 </td>
-                                <td class="px-6 py-4">
-                                    <label class="inline-flex items-center mb-5 cursor-pointer">
+                                <td class="p-3">
+                                    <label class="inline-flex items-center cursor-pointer">
                                         <input type="checkbox" value="" class="sr-only peer" :checked="source.enabled">
                                         <div
                                             class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-black"></div>
                                     </label>
                                 </td>
-                                <td class="px-6 py-4">
+                                <td class="p-1">
                                     <button id="dropdownMenuIconHorizontalButton"
                                             data-dropdown-toggle="dropdownDotsHorizontal"
                                             class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -471,3 +471,4 @@ const sources = [
         </div>
     </AuthenticatedLayout>
 </template>
+
